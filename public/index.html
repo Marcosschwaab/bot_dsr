@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DSR Raid Status</title>
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; padding: 24px; background:#f5f7fb; color:#111; }
+    .card { background:white; border-radius:12px; padding:16px; box-shadow:0 6px 18px rgba(12,20,40,0.08); margin-bottom:12px; display:flex; gap:12px; align-items:center; }
+    img.boss { width:120px; height:120px; object-fit:cover; border-radius:8px; }
+    .info { flex:1 }
+    h1{ margin:0 0 12px 0 }
+    .small { color:#6b7280; font-size:14px }
+  </style>
+</head>
+<body>
+  <h1>DSR Raid Status (Preview)</h1>
+  <p class="small">Página de teste local. Atualiza automaticamente.</p>
+  <div id="list"></div>
+
+  <script>
+    async function fetchRaids() {
+      try {
+        const res = await fetch('/api/raids');
+        const data = await res.json();
+        const list = document.getElementById('list');
+        list.innerHTML = '';
+        if (!data.raids || data.raids.length===0) {
+          list.innerHTML = '<div class="card">Nenhuma raid encontrada</div>';
+          return;
+        }
+        for (const r of data.raids) {
+          const card = document.createElement('div');
+          card.className = 'card';
+          const img = document.createElement('img');
+          img.className = 'boss';
+          img.src = r.image || '/static/placeholder.png';
+          const info = document.createElement('div');
+          info.className = 'info';
+          const spawn = new Date(r.spawn_dt);
+          const now = new Date();
+          const diffMs = spawn - now;
+          const diffMin = Math.max(0, Math.floor(diffMs/60000));
+          info.innerHTML = '<strong>' + r.name + '</strong><div class="small">Mapa: ' + (r.map || '—') + ' — Horário: ' + r.spawn_local + ' — ' + spawn.toLocaleString() + ' — em ' + diffMin + ' min</div>';
+          card.appendChild(img);
+          card.appendChild(info);
+          list.appendChild(card);
+        }
+      } catch (e) {
+        document.getElementById('list').innerHTML = '<div class="card">Erro ao buscar raids: ' + e.message + '</div>';
+      }
+    }
+    fetchRaids();
+    setInterval(fetchRaids, 15000);
+  </script>
+</body>
+</html>

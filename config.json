@@ -1,0 +1,139 @@
+{
+  "manual_raids": [
+    {
+      "name": "Pumpkinmon",
+      "map": "Shibuya",
+      "spawn_local": "07:30",
+      "reward": "Digital Hazard Coin",
+      "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
+      "emote": "<:pumpkinmon:1422725236163608727>",
+      "image": "https://dsrmapboss.netlify.app/img/pumpkinmon.webp",
+      "map_image": "https://dsrmapboss.netlify.app/img/Pumpkinmon%20map.png"
+    },
+    {
+      "name": "Gotsumon",
+      "map": "Shibuya",
+      "spawn_local": "09:30",
+      "reward": "Digital Hazard Coin",
+      "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
+      "emote": "<:gotsumon:1422725210087624744>",
+      "image": "https://dsrmapboss.netlify.app/img/gotsumon.webp",
+      "map_image": "https://dsrmapboss.netlify.app/img/Gotsumon%20map.png"
+    }
+  ],
+  "cycling_rules": [
+    {
+      "name": "Hippogryphonmon",
+      "map": "Gear Savannah",
+      "map_image": "https://dsrmapboss.netlify.app/img/hippogryphonmon%20map.png",
+      "reward": "Digital Hazard Coin",
+      "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
+      "emote": "<:hippogryphonmon:1536172675825930370>",
+      "image": "https://dsrmapboss.netlify.app/img/hippogryphonmon.webp",
+      "base_time": "07:00",
+      "increment_minutes": 25,
+      "cycle_steps": 13,
+      "reference_date": "2026-01-02",
+      "reference_step": 12
+    }
+  ],
+  "biweekly_rules": [],
+  "weekly_alternating_rules": [
+    {
+      "dayOfWeek": 6,
+      "time": "11:00",
+      "pair": ["BlackSeraphimon", "Ophanimon: Fallen Mode"],
+      "referenceDate": "2025-10-04",
+      "maps": ["??? (Spiral Mountain -> Apocalymon Map)", "??? (Spiral Mountain -> Apocalymon Map)"],
+      "map_images": [
+        "https://dsrmapboss.netlify.app/img/BlackSeraphimon%20map.png",
+        "https://dsrmapboss.netlify.app/img/Ophanimon%20Fallen%20Mode%20map.png"
+      ],
+      "rewards": ["Corrupted Digital Hazard Coin", "Corrupted Digital Hazard Coin"],
+      "reward_emotes": ["<:CorruptedDigitalHazardCoin:1422997087909314694>", "<:CorruptedDigitalHazardCoin:1422997087909314694>"],
+      "emotes": ["<:BlackSeraphimon:1422743773636591799>", "<:OphanimonFallenMode:1422743721320906833>"],
+      "images": [
+        "https://dsrmapboss.netlify.app/img/blackseraphimon.webp",
+        "https://dsrmapboss.netlify.app/img/ophanimon.webp"
+      ]
+    },
+    {
+      "dayOfWeek": 7,
+      "time": "10:00",
+      "pair": ["Omegamon", "Megidramon"],
+      "referenceDate": "2025-10-05",
+      "maps": ["Dark Castle Valley", "??? (Spiral Mountain -> Apocalymon Map)"],
+      "map_images": [
+        "https://dsrmapboss.netlify.app/img/Omnimon%20map.png",
+        "https://dsrmapboss.netlify.app/img/Megidramon%20map.png"
+      ],
+      "rewards": ["Sacred Codes", "Corrupted Digital Hazard Coin"],
+      "reward_emotes": ["<:SacredCodes:1422997091076014203>", "<:CorruptedDigitalHazardCoin:1422997087909314694>"],
+      "emotes": ["<:Omegamon:1422743748282155078>", "<:megidramon:1422743697988255835>"],
+      "images": [
+        "https://dsrmapboss.netlify.app/img/omnimon.webp",
+        "https://dsrmapboss.netlify.app/img/megidramon.webp"
+      ]
+    },
+    {
+      "dayOfWeek": 2,
+      "time": "10:00",
+      "pair": ["Zhuqiaomon"],
+      "referenceDate": "2025-10-07",
+      "maps": ["Gear Savannah"],
+      "map_images": ["https://dsrmapboss.netlify.app/img/Zhuqiaomon%20map.png"],
+      "rewards": ["Digital Hazard Coin"],
+      "reward_emotes": ["<:DigitalHazardCoin:1422997093483806861>"],
+      "emotes": ["<:Zhuqiaomon:1435795989926510785>"],
+      "images": ["https://dsrmapboss.netlify.app/img/zhuqiaomon.webp"]
+    },
+        {
+      "dayOfWeek": 3,
+      "time": "10:00",
+      "pair": ["Ebonwumon"],
+      "referenceDate": "2025-10-08",
+      "maps": ["Dragon's Eye Lake"],
+      "map_images": ["https://dsrmapboss.netlify.app/img/ebonwumon%20map.png"],
+      "rewards": ["Digital Hazard Coin"],
+      "reward_emotes": ["<:DigitalHazardCoin:1422997093483806861>"],
+      "emotes": ["<:ebonwumon:1536172563904856124>"],
+      "images": ["https://dsrmapboss.netlify.app/img/ebonwumon.webp"]
+    },
+    {
+      "dayOfWeek": 4,
+      "time": "10:00",
+      "pair": ["Azulongmon"],
+      "referenceDate": "2025-10-09",
+      "maps": ["Dark Castle Valley"],
+      "map_images": ["https://dsrmapboss.netlify.app/img/Azulongmon%20map.png"],
+      "rewards": ["Digital Hazard Coin"],
+      "reward_emotes": ["<:DigitalHazardCoin:1422997093483806861>"],
+      "emotes": ["<:Azulongmon:1435795992653070416>"],
+      "images": ["https://dsrmapboss.netlify.app/img/azulongmon.webp"]
+    },
+    {
+      "dayOfWeek": 5,
+      "time": "10:00",
+      "pair": ["Baihumon"],
+      "referenceDate": "2025-10-10",
+      "maps": ["Desert Area"],
+      "map_images": ["https://dsrmapboss.netlify.app/img/Baihumon%20map.png"],
+      "rewards": ["Digital Hazard Coin"],
+      "reward_emotes": ["<:DigitalHazardCoin:1422997093483806861>"],
+      "emotes": ["<:Baihumon:1435795988244856833>"],
+      "images": ["https://dsrmapboss.netlify.app/img/baihumon.webp"]
+    },
+       {
+      "dayOfWeek": 6,
+      "time": "12:30",
+      "pair": ["Examon"],
+      "referenceDate": "2025-10-04",
+      "maps": ["Dark Castle Valley"],
+      "map_images": ["https://dsrmapboss.netlify.app/img/examon%20map.png"],
+      "rewards": ["Corrupted Digital Hazard Coin"],
+      "reward_emotes": ["<:CorruptedDigitalHazardCoin:1422997087909314694>"],
+      "emotes": ["<:examon:1536172608871993365>"],
+      "images": ["https://dsrmapboss.netlify.app/img/examon.webp"]
+    }
+  ]
+}
