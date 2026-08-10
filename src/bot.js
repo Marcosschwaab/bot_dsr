@@ -31,7 +31,7 @@ function startClient() {
     return readyPromise;
   }
   readyPromise = new Promise((resolve, reject) => {
-    client.once('ready', () => {
+    client.once('clientReady', () => {
       console.log(`Discord client ready as ${client.user.tag}`);
       console.log(`Bot configurado para enviar alertas em ${SERVER_CONFIG.length} canais.`);
       resolve();
