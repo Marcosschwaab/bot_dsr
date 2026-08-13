@@ -24,7 +24,7 @@
   "cycling_rules": [
     {
       "name": "Kimeramon",
-      "map": "Gear Savannah",
+      "map": "Desert Area",
       "map_image": "https://dsrmapboss.netlify.app/img/kimeramon%20map.png",
       "reward": "Digital Hazard Coin",
       "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
