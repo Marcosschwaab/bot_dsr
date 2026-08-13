@@ -23,18 +23,18 @@
   ],
   "cycling_rules": [
     {
-      "name": "Hippogryphonmon",
+      "name": "Kimeramon",
       "map": "Gear Savannah",
-      "map_image": "https://dsrmapboss.netlify.app/img/hippogryphonmon%20map.png",
+      "map_image": "https://dsrmapboss.netlify.app/img/kimeramon%20map.png",
       "reward": "Digital Hazard Coin",
       "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
-      "emote": "<:hippogryphonmon:1536172675825930370>",
-      "image": "https://dsrmapboss.netlify.app/img/hippogryphonmon.webp",
+      "emote": "<:kimeramon:1537268553055469619>",
+      "image": "https://dsrmapboss.netlify.app/img/kimeramon.webp",
       "base_time": "07:00",
       "increment_minutes": 25,
       "cycle_steps": 13,
-      "reference_date": "2026-01-02",
-      "reference_step": 12
+      "reference_date": "2026-08-13",
+      "reference_step": 0
     }
   ],
   "biweekly_rules": [],
