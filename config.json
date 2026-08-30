@@ -23,16 +23,16 @@
   ],
   "cycling_rules": [
     {
-      "name": "Kimeramon",
-      "map": "Desert Area",
-      "map_image": "https://dsrmapboss.netlify.app/img/kimeramon%20map.png",
+      "name": "Lillymon",
+      "map": "Dragon's Eye Lake",
+      "map_image": "https://dsrmapboss.netlify.app/img/lillymon%20map.png",
       "reward": "Digital Hazard Coin",
       "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
-      "emote": "<:kimeramon:1537268553055469619>",
-      "image": "https://dsrmapboss.netlify.app/img/kimeramon.webp",
+      "emote": "<:lillymon:1543611339275247766>",
+      "image": "https://dsrmapboss.netlify.app/img/lillymon.webp",
       "base_time": "07:00",
       "increment_minutes": 25,
-      "cycle_steps": 13,
+      "cycle_steps": 14,
       "reference_date": "2026-08-13",
       "reference_step": 0
     }
@@ -123,17 +123,17 @@
       "emotes": ["<:Baihumon:1435795988244856833>"],
       "images": ["https://dsrmapboss.netlify.app/img/baihumon.webp"]
     },
-       {
+   {
       "dayOfWeek": 6,
       "time": "12:30",
-      "pair": ["Examon"],
-      "referenceDate": "2025-10-04",
-      "maps": ["Dark Castle Valley"],
-      "map_images": ["https://dsrmapboss.netlify.app/img/examon%20map.png"],
-      "rewards": ["Corrupted Digital Hazard Coin"],
-      "reward_emotes": ["<:CorruptedDigitalHazardCoin:1422997087909314694>"],
-      "emotes": ["<:examon:1536172608871993365>"],
-      "images": ["https://dsrmapboss.netlify.app/img/examon.webp"]
+      "pair": ["Examon", ""],
+      "referenceDate": "2026-08-29",
+      "maps": ["Dark Castle Valley", ""],
+      "map_images": ["https://dsrmapboss.netlify.app/img/examon%20map.png", ""],
+      "rewards": ["Corrupted Digital Hazard Coin", ""],
+      "reward_emotes": ["<:CorruptedDigitalHazardCoin:1422997087909314694>", ""],
+      "emotes": ["<:examon:1536172608871993365>", ""],
+      "images": ["https://dsrmapboss.netlify.app/img/examon.webp", ""]
     }
   ]
 }
