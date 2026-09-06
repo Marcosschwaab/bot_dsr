@@ -8,15 +8,10 @@ const TOKEN = process.env.DISCORD_TOKEN;
 
 // --- CONFIGURAÇÃO DE MULTICAST ---
 const SERVER_CONFIG = [
-  { 
-    name: 'Servidor Principal', 
-    channelId: '1422718765145133157', 
-    roleId: '1428595592657109094' 
-  },
-  { 
-    name: 'Servidor Novo', 
-    channelId: '1415429747738939613', 
-    roleId: '1415430804909064333' 
+{ 
+    name: 'DARK ARMY - DSR', 
+    channelId: '1545897780336267355', 
+    roleId: '1413665580661084261' 
   }
 ];
 
