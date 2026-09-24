@@ -91,7 +91,7 @@
       "reward": "Digital Hazard Coin",
       "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
       "emote": "<:WaruMonzaemon:1446135170758606899>",
-      "image": "hhttps://dsrmapboss.netlify.app/img/warumonzaemon.webp",
+      "image": "https://dsrmapboss.netlify.app/img/warumonzaemon.webp",
       "base_time": "07:00",
       "increment_minutes": 25,
       "cycle_steps": 14,
