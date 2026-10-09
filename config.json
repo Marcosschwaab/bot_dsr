@@ -85,13 +85,13 @@
   ],
   "cycling_rules": [
     {
-      "name": "Warumonzaemon",
-      "map": "Metalcity Area",
-      "map_image": "https://dsrmapboss.netlify.app/img/warumonzaemon%20map.png",
+      "name": "Pukumon",
+      "map": "Dark Castle Valley",
+      "map_image": "https://dsrmapboss.netlify.app/img/pukumon%20map.png",
       "reward": "Digital Hazard Coin",
       "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
-      "emote": "<:WaruMonzaemon:1446135170758606899>",
-      "image": "https://dsrmapboss.netlify.app/img/warumonzaemon.webp",
+      "emote": "<:pukumon:1557917052998656040>",
+      "image": "https://dsrmapboss.netlify.app/img/pukumon.webp",
       "base_time": "07:00",
       "increment_minutes": 25,
       "cycle_steps": 14,
@@ -173,78 +173,7 @@
       "emotes": ["<:Azulongmon:1435795992653070416>"],
       "images": ["https://dsrmapboss.netlify.app/img/azulongmon.webp"]
     },
-      {
-      "dayOfWeek": 5,
-      "time": "09:00",
-      "pair": ["Alphamon"],
-      "referenceDate": "2025-10-09",
-      "maps": ["Odaiba Entrance"],
-      "map_images": ["https://dsrmapboss.netlify.app/img/alphamon%20map.png"],
-      "rewards": ["Fragment of the Empty Seat (Event)"],
-      "reward_emotes": ["<:event:1548358106923139073>"],
-      "emotes": ["<:alphamon:1548345072033071244>"],
-      "images": ["https://dsrmapboss.netlify.app/img/alphamon.webp"]
-    },
-       {
-      "dayOfWeek": 5,
-      "time": "21:00",
-      "pair": ["Alphamon"],
-      "referenceDate": "2025-10-09",
-      "maps": ["Odaiba Entrance"],
-      "map_images": ["https://dsrmapboss.netlify.app/img/alphamon%20map.png"],
-      "rewards": ["Fragment of the Empty Seat (Event)"],
-      "reward_emotes": ["<:event:1548358106923139073>"],
-      "emotes": ["<:alphamon:1548345072033071244>"],
-      "images": ["https://dsrmapboss.netlify.app/img/alphamon.webp"]
-    },
-        {
-      "dayOfWeek": 6,
-      "time": "09:00",
-      "pair": ["Alphamon"],
-      "referenceDate": "2025-10-10",
-      "maps": ["Odaiba Entrance"],
-      "map_images": ["https://dsrmapboss.netlify.app/img/alphamon%20map.png"],
-      "rewards": ["Fragment of the Empty Seat (Event)"],
-      "reward_emotes": ["<:event:1548358106923139073>"],
-      "emotes": ["<:alphamon:1548345072033071244>"],
-      "images": ["https://dsrmapboss.netlify.app/img/alphamon.webp"]
-    },
-       {
-      "dayOfWeek": 6,
-      "time": "21:00",
-      "pair": ["Alphamon"],
-      "referenceDate": "2025-10-10",
-      "maps": ["Odaiba Entrance"],
-      "map_images": ["https://dsrmapboss.netlify.app/img/alphamon%20map.png"],
-      "rewards": ["Fragment of the Empty Seat (Event)"],
-      "reward_emotes": ["<:event:1548358106923139073>"],
-      "emotes": ["<:alphamon:1548345072033071244>"],
-      "images": ["https://dsrmapboss.netlify.app/img/alphamon.webp"]
-    },
-            {
-      "dayOfWeek": 7,
-      "time": "09:00",
-      "pair": ["Alphamon"],
-      "referenceDate": "2025-10-11",
-      "maps": ["Odaiba Entrance"],
-      "map_images": ["https://dsrmapboss.netlify.app/img/alphamon%20map.png"],
-      "rewards": ["Fragment of the Empty Seat (Event)"],
-      "reward_emotes": ["<:event:1548358106923139073>"],
-      "emotes": ["<:alphamon:1548345072033071244>"],
-      "images": ["https://dsrmapboss.netlify.app/img/alphamon.webp"]
-    },
-       {
-      "dayOfWeek": 7,
-      "time": "21:00",
-      "pair": ["Alphamon"],
-      "referenceDate": "2025-10-11",
-      "maps": ["Odaiba Entrance"],
-      "map_images": ["https://dsrmapboss.netlify.app/img/alphamon%20map.png"],
-      "rewards": ["Fragment of the Empty Seat (Event)"],
-      "reward_emotes": ["<:event:1548358106923139073>"],
-      "emotes": ["<:alphamon:1548345072033071244>"],
-      "images": ["https://dsrmapboss.netlify.app/img/alphamon.webp"]
-    },
+      
     {
       "dayOfWeek": 5,
       "time": "10:00",
