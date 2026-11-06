@@ -24,13 +24,13 @@
   ],
   "cycling_rules": [
     {
-      "name": "Shogungekomon",
-      "map": "Dark Castle Valley",
-      "map_image": "https://dsrmapboss.netlify.app/img/shogungekomon%20map.png",
+      "name": "Zanbamon",
+      "map": "Forest Area",
+      "map_image": "https://dsrmapboss.netlify.app/img/zanbamon%20map.png",
       "reward": "Digital Hazard Coin",
       "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
-      "emote": "<:shogungekomon:1562980695976976486>",
-      "image": "https://dsrmapboss.netlify.app/img/shogungekomon.webp",
+      "emote": "<:zanbamon:1568060666395234426>",
+      "image": "https://dsrmapboss.netlify.app/img/zanbamon.webp",
       "base_time": "07:00",
       "increment_minutes": 25,
       "cycle_steps": 14,
@@ -41,10 +41,10 @@
   "biweekly_rules": [],
   "weekly_alternating_rules": [
     {
-      "dayOfWeek": 6,
-      "time": "11:00",
+      "dayOfWeek": 5,
+      "time": "20:00",
       "pair": ["BlackSeraphimon", "Ophanimon: Fallen Mode"],
-      "referenceDate": "2025-10-04",
+      "referenceDate": "2026-10-30",
       "maps": ["??? (Spiral Mountain -> Apocalymon Map)", "??? (Spiral Mountain -> Apocalymon Map)"],
       "map_images": [
         "https://dsrmapboss.netlify.app/img/BlackSeraphimon%20map.png",
@@ -59,10 +59,10 @@
       ]
     },
     {
-      "dayOfWeek": 7,
-      "time": "10:00",
+      "dayOfWeek": 6,
+      "time": "20:00",
       "pair": ["Omegamon", "Megidramon"],
-      "referenceDate": "2025-10-05",
+      "referenceDate": "2026-10-31",
       "maps": ["Dark Castle Valley", "??? (Spiral Mountain -> Apocalymon Map)"],
       "map_images": [
         "https://dsrmapboss.netlify.app/img/Omnimon%20map.png",
@@ -77,10 +77,10 @@
       ]
     },
     {
-      "dayOfWeek": 2,
-      "time": "10:00",
+      "dayOfWeek": 1,
+      "time": "20:00",
       "pair": ["Zhuqiaomon"],
-      "referenceDate": "2025-10-07",
+      "referenceDate": "2026-11-09",
       "maps": ["Gear Savannah"],
       "map_images": ["https://dsrmapboss.netlify.app/img/Zhuqiaomon%20map.png"],
       "rewards": ["Digital Hazard Coin"],
@@ -89,10 +89,10 @@
       "images": ["https://dsrmapboss.netlify.app/img/zhuqiaomon.webp"]
     },
         {
-      "dayOfWeek": 3,
-      "time": "10:00",
+      "dayOfWeek": 2,
+      "time": "20:00",
       "pair": ["Ebonwumon"],
-      "referenceDate": "2025-10-08",
+      "referenceDate": "2026-11-10",
       "maps": ["Dragon's Eye Lake"],
       "map_images": ["https://dsrmapboss.netlify.app/img/ebonwumon%20map.png"],
       "rewards": ["Digital Hazard Coin"],
@@ -101,10 +101,10 @@
       "images": ["https://dsrmapboss.netlify.app/img/ebonwumon.webp"]
     },
     {
-      "dayOfWeek": 4,
-      "time": "10:00",
+      "dayOfWeek": 3,
+      "time": "20:00",
       "pair": ["Azulongmon"],
-      "referenceDate": "2025-10-09",
+      "referenceDate": "2026-11-11",
       "maps": ["Dark Castle Valley"],
       "map_images": ["https://dsrmapboss.netlify.app/img/Azulongmon%20map.png"],
       "rewards": ["Digital Hazard Coin"],
@@ -114,10 +114,10 @@
     },
       
     {
-      "dayOfWeek": 5,
-      "time": "10:00",
+      "dayOfWeek": 4,
+      "time": "20:00",
       "pair": ["Baihumon"],
-      "referenceDate": "2025-10-10",
+      "referenceDate": "2026-11-12",
       "maps": ["Desert Area"],
       "map_images": ["https://dsrmapboss.netlify.app/img/Baihumon%20map.png"],
       "rewards": ["Digital Hazard Coin"],
@@ -127,7 +127,7 @@
     },
    {
       "dayOfWeek": 6,
-      "time": "12:30",
+      "time": "10:00",
       "pair": ["Examon", ""],
       "referenceDate": "2026-08-29",
       "maps": ["Dark Castle Valley", ""],
