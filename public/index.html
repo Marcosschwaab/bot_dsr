@@ -3,53 +3,377 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DSR Raid Status</title>
+  <title>DSR Raid Status (Preview)</title>
   <style>
-    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; padding: 24px; background:#f5f7fb; color:#111; }
-    .card { background:white; border-radius:12px; padding:16px; box-shadow:0 6px 18px rgba(12,20,40,0.08); margin-bottom:12px; display:flex; gap:12px; align-items:center; }
-    img.boss { width:120px; height:120px; object-fit:cover; border-radius:8px; }
-    .info { flex:1 }
-    h1{ margin:0 0 12px 0 }
-    .small { color:#6b7280; font-size:14px }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      padding: 24px 32px;
+      background: #f5f7fb;
+      color: #111827;
+      margin: 0;
+    }
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 6px 0;
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .subtitle {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    /* Botões dos Dias da Semana */
+    .days-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .day-btn {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(12, 20, 40, 0.04);
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .day-btn:hover {
+      border-color: #3b82f6;
+      color: #1d4ed8;
+      transform: translateY(-1px);
+    }
+    .day-btn.active {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+    .day-badge {
+      background: #f3f4f6;
+      color: #4b5563;
+      font-size: 12px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .day-btn.active .day-badge {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+    }
+
+    /* Lista de Cards */
+    .cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Card Completo Melhorado (Modelo Original Expandido) */
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(12, 20, 40, 0.08);
+      border-left: 5px solid #f97316;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card-top {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    img.boss {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      background: #f9fafb;
+      border: 1px solid #f3f4f6;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .info {
+      flex: 1;
+    }
+    .boss-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .boss-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #111827;
+    }
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+    .meta-line {
+      color: #4b5563;
+      font-size: 14px;
+      margin: 4px 0;
+    }
+    .reward-pill {
+      display: inline-block;
+      margin-top: 6px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #b45309;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* Área de Imagens do Mapa dentro do Card */
+    .map-section {
+      border-top: 1px solid #f3f4f6;
+      padding-top: 14px;
+    }
+    .map-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    img.map-full {
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      background: #0f172a;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Card Especial da DG de Quinta (Beelzemon - 3 Blocos) */
+    .card.dg-special {
+      border-left: 6px solid #e74c3c;
+      background: linear-gradient(180deg, #fff5f5 0%, #ffffff 140px);
+    }
+    .dg-header-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #b91c1c;
+      margin: 0 0 4px 0;
+    }
+    .dg-boss-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111827;
+      margin: 0 0 8px 0;
+    }
+    img.dg-gif {
+      width: 100%;
+      max-height: 320px;
+      object-fit: contain;
+      background: #0f172a;
+      border-radius: 10px;
+      display: block;
+    }
+    .dg-maps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .dg-maps-grid img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      background: #0f172a;
+      border-radius: 10px;
+      display: block;
+    }
+    @media (max-width: 680px) {
+      .dg-maps-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <h1>DSR Raid Status (Preview)</h1>
-  <p class="small">Página de teste local. Atualiza automaticamente.</p>
-  <div id="list"></div>
+  <div class="container">
+    <h1>DSR Raid Status (Preview)</h1>
+    <div class="subtitle">Selecione um dia da semana abaixo para visualizar todos os bosses e cards completos daquele dia. Atualiza automaticamente.</div>
+
+    <!-- Barra de Dias da Semana -->
+    <div class="days-nav" id="daysNav"></div>
+
+    <!-- Lista de Raids do Dia Selecionado -->
+    <div class="cards-list" id="list"></div>
+  </div>
 
   <script>
+    const DAYS = [
+      { id: 1, label: 'Segunda-feira' },
+      { id: 2, label: 'Terça-feira' },
+      { id: 3, label: 'Quarta-feira' },
+      { id: 4, label: 'Quinta-feira' },
+      { id: 5, label: 'Sexta-feira' },
+      { id: 6, label: 'Sábado' },
+      { id: 7, label: 'Domingo' }
+    ];
+
+    // Seleciona automaticamente o dia da semana atual ao abrir (Dom=7, Seg=1...Sáb=6)
+    const jsDay = new Date().getDay();
+    let selectedDay = jsDay === 0 ? 7 : jsDay;
+    let weeklyData = {};
+
+    function formatBold(text) {
+      if (!text) return '';
+      return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    }
+
+    function renderDayButtons() {
+      const nav = document.getElementById('daysNav');
+      nav.innerHTML = '';
+      const todayId = new Date().getDay() === 0 ? 7 : new Date().getDay();
+
+      for (const d of DAYS) {
+        const count = (weeklyData[d.id] || []).length;
+        const btn = document.createElement('button');
+        btn.className = 'day-btn' + (selectedDay === d.id ? ' active' : '');
+        const todayTag = d.id === todayId ? ' (Hoje)' : '';
+        btn.innerHTML = `
+          <span>${d.label}${todayTag}</span>
+          <span class="day-badge">${count}</span>
+        `;
+        btn.onclick = () => {
+          selectedDay = d.id;
+          renderDayButtons();
+          renderDayRaids();
+        };
+        nav.appendChild(btn);
+      }
+    }
+
+    function renderDayRaids() {
+      const list = document.getElementById('list');
+      list.innerHTML = '';
+      const raids = weeklyData[selectedDay] || [];
+
+      if (raids.length === 0) {
+        list.innerHTML = '<div class="card">Nenhuma raid configurada para este dia da semana.</div>';
+        return;
+      }
+
+      const now = new Date();
+
+      for (const r of raids) {
+        const spawn = new Date(r.spawn_dt);
+        const diffMs = spawn - now;
+        const diffMin = Math.max(0, Math.floor(diffMs / 60000));
+
+        // 1. Card Especial da DG de Quinta-feira (Beelzemon)
+        if (r.type === 'persistent_dg') {
+          const dgCard = document.createElement('div');
+          dgCard.className = 'card dg-special';
+          dgCard.style.borderLeftColor = r.color || '#e74c3c';
+
+          dgCard.innerHTML = `
+            <div>
+              <div class="dg-header-title">${r.dg_name}</div>
+              <div class="dg-boss-name">${r.name}</div>
+              <div class="meta-line">
+                ⏰ <strong>Abertura:</strong> Quinta-feira às ${r.spawn_local} — <strong>Fechamento:</strong> Sexta-feira às ${r.delete_time} (Fica fixa por 24h)
+              </div>
+            </div>
+
+            ${r.gif ? `
+              <div class="map-section">
+                <div class="map-label">🎬 Apresentação do Boss (GIF)</div>
+                <img class="dg-gif" src="${r.gif}" alt="${r.name}" />
+              </div>
+            ` : ''}
+
+            ${(r.entry_map_image || r.inside_map_image) ? `
+              <div class="map-section">
+                <div class="map-label">${formatBold(r.map_header || '📍 Esquerda: Onde encontrar a DG | 🗺️ Direita: Mapa interno da DG')}</div>
+                <div class="dg-maps-grid">
+                  ${r.entry_map_image ? `<img src="${r.entry_map_image}" alt="Mapa Entrada" />` : ''}
+                  ${r.inside_map_image ? `<img src="${r.inside_map_image}" alt="Mapa Interno" />` : ''}
+                </div>
+              </div>
+            ` : ''}
+
+            ${(r.rewards_description || r.rewards_image) ? `
+              <div class="map-section">
+                <div class="map-label">${formatBold(r.rewards_description || '🏆 Recompensas da Dungeon')}</div>
+                ${r.rewards_image ? `<img class="map-full" src="${r.rewards_image}" alt="Recompensas" />` : ''}
+              </div>
+            ` : ''}
+          `;
+
+          list.appendChild(dgCard);
+          continue;
+        }
+
+        // 2. Card Completo dos Bosses Normais / Semanais / Cíclicos
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const badgeHtml = r.rotation_badge ? `<span class="badge">${r.rotation_badge}</span>` : '';
+        const rewardHtml = r.reward ? `<div class="reward-pill">🏆 Recompensa: ${r.reward}</div>` : '';
+        const mapImgHtml = r.map_image ? `
+          <div class="map-section">
+            <div class="map-label">🗺️ Localização no Mapa (${r.map || 'Mapa'})</div>
+            <img class="map-full" src="${r.map_image}" alt="Mapa de ${r.name}" />
+          </div>
+        ` : '';
+
+        card.innerHTML = `
+          <div class="card-top">
+            <img class="boss" src="${r.image || '/static/placeholder.png'}" alt="${r.name}" />
+            <div class="info">
+              <div class="boss-header">
+                <span class="boss-title">${r.name}</span>
+                ${badgeHtml}
+              </div>
+              <div class="meta-line">
+                📍 <strong>Mapa:</strong> ${r.map || '—'} — ⏰ <strong>Horário:</strong> ${r.spawn_local} — ${spawn.toLocaleString('pt-BR')} — <strong>em ${diffMin} min</strong>
+              </div>
+              ${rewardHtml}
+            </div>
+          </div>
+          ${mapImgHtml}
+        `;
+
+        list.appendChild(card);
+      }
+    }
+
     async function fetchRaids() {
       try {
         const res = await fetch('/api/raids');
         const data = await res.json();
-        const list = document.getElementById('list');
-        list.innerHTML = '';
-        if (!data.raids || data.raids.length===0) {
-          list.innerHTML = '<div class="card">Nenhuma raid encontrada</div>';
-          return;
-        }
-        for (const r of data.raids) {
-          const card = document.createElement('div');
-          card.className = 'card';
-          const img = document.createElement('img');
-          img.className = 'boss';
-          img.src = r.image || '/static/placeholder.png';
-          const info = document.createElement('div');
-          info.className = 'info';
-          const spawn = new Date(r.spawn_dt);
-          const now = new Date();
-          const diffMs = spawn - now;
-          const diffMin = Math.max(0, Math.floor(diffMs/60000));
-          info.innerHTML = '<strong>' + r.name + '</strong><div class="small">Mapa: ' + (r.map || '—') + ' — Horário: ' + r.spawn_local + ' — ' + spawn.toLocaleString() + ' — em ' + diffMin + ' min</div>';
-          card.appendChild(img);
-          card.appendChild(info);
-          list.appendChild(card);
-        }
+        weeklyData = data.weekly || {};
+        renderDayButtons();
+        renderDayRaids();
       } catch (e) {
         document.getElementById('list').innerHTML = '<div class="card">Erro ao buscar raids: ' + e.message + '</div>';
       }
     }
+
     fetchRaids();
     setInterval(fetchRaids, 15000);
   </script>

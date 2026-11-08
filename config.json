@@ -1,42 +1,6 @@
 {
   "manual_raids": [
-    {
-      "name": "Pumpkinmon",
-      "map": "Shibuya",
-      "spawn_local": "07:30",
-      "reward": "Digital Hazard Coin",
-      "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
-      "emote": "<:pumpkinmon:1422725236163608727>",
-      "image": "https://dsrmapboss.netlify.app/img/pumpkinmon.webp",
-      "map_image": "https://dsrmapboss.netlify.app/img/Pumpkinmon%20map.png"
-    },
-    {
-      "name": "Gotsumon",
-      "map": "Shibuya",
-      "spawn_local": "09:30",
-      "reward": "Digital Hazard Coin",
-      "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
-      "emote": "<:gotsumon:1422725210087624744>",
-      "image": "https://dsrmapboss.netlify.app/img/gotsumon.webp",
-      "map_image": "https://dsrmapboss.netlify.app/img/Gotsumon%20map.png"
-    }
 
-  ],
-  "cycling_rules": [
-    {
-      "name": "Zanbamon",
-      "map": "Forest Area",
-      "map_image": "https://dsrmapboss.netlify.app/img/zanbamon%20map.png",
-      "reward": "Digital Hazard Coin",
-      "reward_emote": "<:DigitalHazardCoin:1422997093483806861>",
-      "emote": "<:zanbamon:1568060666395234426>",
-      "image": "https://dsrmapboss.netlify.app/img/zanbamon.webp",
-      "base_time": "07:00",
-      "increment_minutes": 25,
-      "cycle_steps": 14,
-      "reference_date": "2026-08-13",
-      "reference_step": 0
-    }
   ],
   "biweekly_rules": [],
   "weekly_alternating_rules": [
@@ -137,5 +101,25 @@
       "emotes": ["<:examon:1536172608871993365>", ""],
       "images": ["https://dsrmapboss.netlify.app/img/examon.webp", ""]
     }
+  ],
+  
+"persistent_weekly_rules": [
+    {
+      "dg_name": "🏰 DUNGEON ESPECIAL DE QUINTA",
+      "name": "👹 Boss: Beelzemon",
+      "emote": "<:beelzemon:1569110720426156032>",
+      "color": "#e74c3c",
+      "spawn_day": 4,
+      "spawn_time": "12:00",
+      "delete_day": 5,
+      "delete_time": "12:00",
+      "gif": "https://dsrmapboss.netlify.app/img/beelzemon%20gif.gif",
+      "map_header": "📍 **Esquerda:** Onde encontrar a DG | 🗺️ **Direita:** Mapa interno da DG",
+      "entry_map_image": "https://dsrmapboss.netlify.app/img/beelzemon%20map.png",
+      "inside_map_image": "https://dsrmapboss.netlify.app/img/beelzemon%20map%20interno.png",
+      "rewards_description": "🏆 **Recompensas da Dungeon:**",
+      "rewards_image": "https://dsrmapboss.netlify.app/img/beelzemon%20recompensas.png"
+    }
   ]
+
 }

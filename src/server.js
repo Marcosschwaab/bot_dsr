@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 3000;
 app.use('/static', express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/api/raids', (req, res) => {
-  res.json({ raids: scheduler.getUpcomingRaids() });
+  res.json({
+    raids: scheduler.getUpcomingRaids(),
+    weekly: scheduler.getWeeklySchedule()
+  });
 });
 
 app.get('/', (req, res) => {
